@@ -2,7 +2,8 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    #- cron: '*/5 * * * *'
+    - cron: '0 0 * * *'
   push:
     branches:
       - main   # ou a branch onde você deseja rodar o script
