@@ -3,7 +3,13 @@ name: run main.py
 on:
   schedule:
     - cron: '*/5 * * * *'
-
+  push:
+    branches:
+      - main   # ou a branch onde você deseja rodar o script
+  pull_request:
+    branches:
+      - main   # ou a branch de pull request
+  workflow_dispatch:  # Permite a execução manual do workflow
 jobs:
   run_schedule:
     runs-on: ubuntu-latest
